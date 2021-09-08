@@ -28,7 +28,7 @@ void setup() {
   MyTim->setMode(channel_1, TIMER_OUTPUT_COMPARE_PWM1, pin1);
   MyTim->setMode(channel_2, TIMER_OUTPUT_COMPARE_PWM1, pin2);
   
-  MyTim->setOverflow(100, HZ_FORMAT); 
+  MyTim->setOverflow(100, HERTZ_FORMAT); 
 
   //setando dutyCycle do channel 1 de 50%
   MyTim->setCaptureCompare(channel_1, 50, PERCENT_COMPARE_FORMAT); 
