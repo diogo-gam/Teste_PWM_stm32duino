@@ -27,11 +27,8 @@ void setup() {
   //pino em HIGH quando counter < compare e LOW quando counter > compare
   MyTim->setMode(channel_1, TIMER_OUTPUT_COMPARE_PWM1, pin1);
   MyTim->setMode(channel_2, TIMER_OUTPUT_COMPARE_PWM1, pin2);
-  //setando overflow para contar ate 2^15 bits
-  MyTim->setOverflow(32768); 
-
-  // setando prescaler (factor value - 1)
-  MyTim->setPrescaleFactor(0); 
+  
+  MyTim->setOverflow(100, HZ_FORMAT); 
 
   //setando dutyCycle do channel 1 de 50%
   MyTim->setCaptureCompare(channel_1, 50, PERCENT_COMPARE_FORMAT); 
